@@ -1,0 +1,1 @@
+(()=>{const map=document.querySelector('#map');if(!map)return;setTimeout(()=>{const r=[...getReports()].sort((a,b)=>new Date(b.createdAt)-new Date(a.createdAt))[0];if(!r)return;const p=document.createElement('button');p.className='latest-report-pin marker';p.dataset.id=r.id;p.setAttribute('aria-label',`${r.placeName} 최근 신고`);p.innerHTML='<span>●</span>';map.append(p)},250)})();
